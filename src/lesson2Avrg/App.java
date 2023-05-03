@@ -1,4 +1,4 @@
-package Lesson2Avrg;
+package lesson2Avrg;
 
 import java.util.Scanner;
 
