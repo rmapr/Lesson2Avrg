@@ -37,7 +37,7 @@ public class App {
             System.out.printf("Enter %d number:\n", count);
             sum += sc.nextDouble();
         }
-        System.out.printf("Arithmetic mean of an arbitrary numbers: %.2f", getAvrgNumbers(sum, kolNumber));
+        System.out.printf("Arithmetic mean %d numbers: %.2f",kolNumber, getAvrgNumbers(sum, kolNumber));
     }
 
     private static double getAvrgNumbers(double sum, double number){
