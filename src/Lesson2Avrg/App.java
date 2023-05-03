@@ -9,10 +9,10 @@ public class App {
         numTask = getNumTask();
         switch (numTask) {
             case 1 -> {
-//                calcAvrgTwoNumbers();
+                calcAvrgTwoNumbers();
             }
             case 2-> {
-//                calcAvrgAnyNumbers();
+                calcAvrgAnyNumbers();
             }
             default ->{
                 System.out.println("Shutdown...");
@@ -20,6 +20,26 @@ public class App {
             }
         }
     }
+    private static void calcAvrgTwoNumbers(){
+        System.out.print("Enter two numbers:\n");
+        double num1 = sc.nextDouble();
+        double num2 = sc.nextDouble();
+        System.out.printf("Arithmetic mean of two numbers: %.2f", getAvrgNumbers(num1 + num2, 2));
+    }
+
+    private static void calcAvrgAnyNumbers(){
+        System.out.print("Enter arbitrary integer numbers:\n");
+        int kolNumber = sc.nextInt();
+        double sum = 0;
+        int count = 0;
+        for (int i = 0; i < kolNumber; i++) {
+            count++;
+            System.out.printf("Enter %d number:\n", count);
+            sum += sc.nextDouble();
+        }
+        System.out.printf("Arithmetic mean of an arbitrary numbers: %.2f", getAvrgNumbers(sum, kolNumber));
+    }
+
     private static double getAvrgNumbers(double sum, double number){
         return sum / number;
     }
